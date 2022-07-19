@@ -1,0 +1,59 @@
+
+.hero-img{
+  background-image: url(https://hoopshabit.com/files/2014/10/salt-lake-city-nba-memphis-grizzlies-utah-jazz.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.score-board{
+  background-color: rgba(18, 78, 243, 0.6);
+  border: 2px solid rgb(127, 157, 240);
+
+}
+
+.btn-main{
+  background-color: rgba(18, 78, 243, 0.6);
+  color: rgb(230, 229, 219);
+  width: fit-content;
+  border: none;
+  font-size: 30px;
+}
+
+.btn-reset{
+  background-color: rgb(121, 5, 5);
+  color: rgb(231, 223, 223);
+  border: none;
+  font-size: 30px;
+}
+
+.text-main{
+  color: rgb(230, 229, 219);
+  text-shadow: 1px 0px 3px white;
+  font-size: 60px;
+}
+
+#home-score{
+  height: 1em;
+  width: 2em;
+  background-color: rgba(18, 78, 243, 0.6);
+  color: rgb(230, 229, 219);
+  text-shadow: 1px 0px 3px white;
+  font-size: 75px;
+  border: 2px solid rgb(127, 157, 240);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 100px;
+}
+
+#away-score{
+  height: 1em;
+  width: 2em;
+  background-color: rgba(18, 78, 243, 0.4);
+  color: rgb(230, 229, 219);
+  text-shadow: 1px 0px 3px white;
+  font-size: 75px;
+  border: 2px solid rgb(127, 157, 240);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 100px;
+}
+
+

@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous'>
+  <link rel="stylesheet" href="style.css">
+  <title>Scoreboard</title>
+
+
+  <style>
+    body.debug .container,
+    body.debug .container-fluid {
+      outline: 2px double blue;
+      outline-offset: -2px;
+    } 
+  
+    body.debug .row {
+      outline: 2px dashed red;
+      outline-offset: -2px;
+    }
+  
+    body.debug [class*="col-"] {
+      outline: 2px dotted forestgreen;
+      outline-offset: -3px;
+    }
+  </style>
+</head>
+
+<body class="container-fluid bg-dark hero-img">
+  <main class="row container-fluid justify-content-center">
+    <div class="col-12 col-md-2 offset-md-8 d-flex justify-content-between">
+      <form class="my-3" onsubmit="addTeam(event)">
+        <div id ="add-team"class="">
+          <input placeholder="Name" type="text" name="name">
+            <button class="btn-main" type="submit">ADD PLAYER</button>
+        </div>    
+      <button class="btn-reset rounded my-2 p-2" onclick="reset()">RESET</button>
+    </div>
+    <div class="col-12 col-md-7">
+      <div class="row container-fluid score-board text-main">
+        <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+          <div>
+            HOME
+          </div>
+          <div id="home-score" class="col-12 col-md-6 d-flex align-items-center justify-content-center rounded m-3">
+          </div>
+        </div>
+        <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+          <div>
+            AWAY
+          </div>
+          <div id="away-score" class="col-12 col-md-6 d-flex align-items-center justify-content-center rounded m-3">
+          </div> 
+        </div> 
+        <div id="teams">
+        </div> 
+      </div>
+    </div>
+    
+
+<!-- NOTE SCORE BUTTONS -->
+    <div class="col-12 col-md-8">
+      <div class="row container-fluid">
+        <div class="col-12 col-md-6 d-flex justify-content-center flex-column align-items-center">
+          <button class="col-12 col-md-2 btn-main rounded my-3" onclick="homeTeamScore()">HOME +1
+          </button> 
+          <button class="col-12 col-md-2 btn-main rounded my-3" onclick="homeTeamScore3()">HOME +3
+          </button>
+          </button>
+        </div>
+        <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+          <button class="col-12 col-md-2 btn-main rounded my-3" onclick="awayTeamScore()">AWAY +1
+          </button> 
+          <button class="col-12 col-md-2 btn-main rounded my-3" onclick="awayTeamScore3()">AWAY +3
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script src="app.js"></script> 
+</body>
+</html>
